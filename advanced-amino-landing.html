@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Are You Losing Muscle Without Knowing It? | Advanced Amino Formula</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lora:ital,wght@0,400;0,600;1,400&family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:    #0b1220;
+  --navy2:   #111d30;
+  --blue:    #1a3a6b;
+  --gold:    #d4a82a;
+  --gold2:   #f5c842;
+  --red:     #c73a2b;
+  --cream:   #f7f4ee;
+  --offwhite:#edeae3;
+  --mid:     #5a6070;
+  --light:   #a0a8b8;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Mulish',sans-serif;
+  background:var(--cream);
+  color:var(--navy);
+  overflow-x:hidden;
+}
+
+/* ── ALERT BAR ── */
+.alert-bar{
+  background:var(--red);
+  color:#fff;
+  text-align:center;
+  padding:11px 20px;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.6px;
+}
+.alert-bar span{opacity:.85;font-weight:400}
+
+/* ── HERO ── */
+.hero{
+  background:var(--navy);
+  position:relative;
+  overflow:hidden;
+  padding:70px 20px 80px;
+}
+.hero::before{
+  content:'';
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 90% 70% at 5% 100%, rgba(26,58,107,.7) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 95% 0%,   rgba(212,168,42,.12) 0%, transparent 55%);
+}
+.hero-inner{
+  max-width:860px;
+  margin:0 auto;
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr 340px;
+  gap:48px;
+  align-items:center;
+}
+@media(max-width:720px){.hero-inner{grid-template-columns:1fr}}
+
+.hero-eyebrow{
+  display:inline-block;
+  background:rgba(212,168,42,.15);
+  border:1px solid rgba(212,168,42,.45);
+  color:var(--gold2);
+  font-size:11px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  padding:7px 18px;
+  border-radius:100px;
+  margin-bottom:22px;
+  animation:up .6s both;
+}
+.hero h1{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(44px,6vw,78px);
+  line-height:1;
+  color:#fff;
+  letter-spacing:1px;
+  animation:up .7s .1s both;
+}
+.hero h1 em{color:var(--gold2);font-style:normal}
+.hero-sub{
+  font-family:'Lora',serif;
+  font-size:clamp(16px,2.2vw,20px);
+  color:rgba(255,255,255,.65);
+  line-height:1.65;
+  margin-top:18px;
+  max-width:540px;
+  animation:up .7s .2s both;
+}
+.hero-cta{
+  margin-top:36px;
+  animation:up .7s .3s both;
+}
+.btn-gold{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--gold) 0%,var(--gold2) 100%);
+  color:var(--navy);
+  font-family:'Mulish',sans-serif;
+  font-size:16px;
+  font-weight:800;
+  padding:18px 38px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  letter-spacing:.4px;
+  text-decoration:none;
+  box-shadow:0 8px 32px rgba(212,168,42,.35);
+  transition:transform .15s,box-shadow .2s;
+}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(212,168,42,.5)}
+.btn-sub{
+  display:block;
+  margin-top:10px;
+  font-size:12px;
+  color:rgba(255,255,255,.35);
+  letter-spacing:.3px;
+}
+
+/* Product Box */
+.product-box{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:16px;
+  padding:28px;
+  text-align:center;
+  animation:up .7s .25s both;
+}
+@media(max-width:720px){.product-box{display:none}}
+.product-img{
+  width:160px;
+  height:160px;
+  background:linear-gradient(145deg,#1a3a6b,#0b1220);
+  border-radius:12px;
+  margin:0 auto 18px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:60px;
+  border:2px solid rgba(212,168,42,.25);
+}
+.product-name{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:22px;
+  color:#fff;
+  letter-spacing:1px;
+  margin-bottom:4px;
+}
+.product-by{font-size:12px;color:var(--light)}
+.product-stars{color:var(--gold2);font-size:20px;margin:12px 0 4px}
+.product-reviews{font-size:12px;color:var(--light)}
+.product-badge{
+  display:inline-block;
+  background:rgba(45,160,80,.2);
+  border:1px solid rgba(45,160,80,.4);
+  color:#6fcf97;
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  padding:6px 14px;
+  border-radius:100px;
+  margin-top:12px;
+}
+
+/* ── STAT BAR ── */
+.stat-bar{
+  background:var(--navy2);
+  padding:28px 20px;
+  border-top:1px solid rgba(255,255,255,.06);
+  border-bottom:3px solid var(--gold);
+}
+.stats{
+  max-width:860px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  gap:24px;
+}
+.stat{text-align:center}
+.stat-n{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:40px;
+  color:var(--gold2);
+  line-height:1;
+}
+.stat-l{font-size:12px;color:var(--light);letter-spacing:1.5px;text-transform:uppercase;margin-top:4px}
+
+/* ── SECTION BASE ── */
+.sec{padding:72px 20px}
+.sec-inner{max-width:860px;margin:0 auto}
+.sec-tag{
+  font-size:11px;letter-spacing:4px;text-transform:uppercase;
+  color:var(--gold);font-weight:700;margin-bottom:10px;
+}
+.sec-h{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(32px,5vw,52px);
+  line-height:1.05;
+  letter-spacing:.5px;
+  margin-bottom:16px;
+}
+.sec-lead{
+  font-family:'Lora',serif;
+  font-size:17px;
+  color:var(--mid);
+  line-height:1.75;
+  max-width:640px;
+  margin-bottom:40px;
+}
+.rule{width:56px;height:3px;background:var(--gold);border-radius:2px;margin-bottom:32px}
+
+/* ── PROBLEM STRIP ── */
+.prob{
+  background:var(--navy);
+  color:#fff;
+  padding:72px 20px;
+  position:relative;overflow:hidden;
+}
+.prob::after{
+  content:'30%';
+  position:absolute;right:-30px;top:50%;transform:translateY(-50%);
+  font-family:'Bebas Neue',sans-serif;font-size:260px;
+  color:rgba(255,255,255,.03);line-height:1;pointer-events:none;
+}
+.prob-inner{max-width:860px;margin:0 auto;position:relative}
+.prob-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  margin-top:40px;
+}
+@media(max-width:620px){.prob-grid{grid-template-columns:1fr}}
+.prob-col h3{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:22px;letter-spacing:.5px;
+  margin-bottom:16px;
+}
+.prob-col.bad h3{color:#ef8080}
+.prob-col.good h3{color:#6fcf97}
+.prob-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+.prob-list li{
+  font-size:15px;line-height:1.55;
+  color:rgba(255,255,255,.7);
+  padding-left:26px;position:relative;
+}
+.prob-col.bad  .prob-list li::before{content:'✕';position:absolute;left:0;color:#ef8080;font-weight:700}
+.prob-col.good .prob-list li::before{content:'✓';position:absolute;left:0;color:#6fcf97;font-weight:700}
+
+/* ── HOW IT WORKS ── */
+.how{background:var(--offwhite)}
+.amino-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+.amino-card{
+  background:#fff;
+  border-radius:14px;
+  padding:28px 24px;
+  border:1px solid rgba(0,0,0,.07);
+  box-shadow:0 2px 16px rgba(0,0,0,.04);
+  transition:transform .2s,box-shadow .2s;
+}
+.amino-card:hover{transform:translateY(-4px);box-shadow:0 10px 32px rgba(0,0,0,.1)}
+.amino-icon{
+  width:52px;height:52px;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--navy),var(--blue));
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;
+  margin-bottom:16px;
+  box-shadow:0 4px 14px rgba(11,18,32,.25);
+}
+.amino-t{font-weight:700;font-size:16px;margin-bottom:8px;color:var(--navy)}
+.amino-p{font-size:14px;color:var(--mid);line-height:1.6}
+
+/* ── INGREDIENTS ── */
+.ingr-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:14px;
+}
+.ingr-pill{
+  background:var(--navy);
+  color:#fff;
+  border-radius:10px;
+  padding:18px 20px;
+  border-left:3px solid var(--gold);
+}
+.ingr-name{font-weight:700;font-size:14px;color:var(--gold2)}
+.ingr-desc{font-size:12px;color:rgba(255,255,255,.55);margin-top:4px;line-height:1.5}
+
+/* ── WHO IT'S FOR ── */
+.who{background:var(--navy2);padding:72px 20px}
+.who-inner{max-width:860px;margin:0 auto}
+.who-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+  margin-top:40px;
+}
+.who-card{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:12px;
+  padding:24px 20px;
+  text-align:center;
+}
+.who-emoji{font-size:32px;display:block;margin-bottom:12px}
+.who-t{color:#fff;font-weight:700;font-size:15px;margin-bottom:6px}
+.who-p{color:var(--light);font-size:13px;line-height:1.55}
+
+/* ── TESTIMONIALS ── */
+.testi-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+.testi{
+  background:#fff;
+  border-radius:14px;
+  padding:28px;
+  border:1px solid rgba(0,0,0,.07);
+  position:relative;
+}
+.testi::before{
+  content:'"';
+  font-family:'Lora',serif;
+  font-size:80px;
+  line-height:1;
+  color:var(--gold2);
+  opacity:.25;
+  position:absolute;top:12px;left:20px;
+}
+.testi-stars{color:var(--gold2);font-size:15px;margin-bottom:10px}
+.testi-txt{
+  font-family:'Lora',serif;
+  font-style:italic;
+  font-size:14.5px;
+  line-height:1.7;
+  color:var(--navy);
+  margin-bottom:16px;
+}
+.testi-who{font-size:13px;font-weight:700;color:var(--blue)}
+.testi-loc{font-size:12px;color:var(--mid)}
+
+/* ── BENEFITS CHECKLIST ── */
+.benefits-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+@media(max-width:560px){.benefits-list{grid-template-columns:1fr}}
+.bene-item{
+  display:flex;gap:12px;align-items:flex-start;
+  background:#fff;
+  border-radius:10px;
+  padding:16px 18px;
+  border:1px solid rgba(0,0,0,.06);
+}
+.bene-tick{
+  width:24px;height:24px;min-width:24px;
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:900;color:var(--navy);
+}
+.bene-text{font-size:14px;line-height:1.55;color:var(--navy)}
+
+/* ── PRODUCT SPECS ── */
+.specs{background:var(--navy);padding:56px 20px}
+.specs-inner{max-width:860px;margin:0 auto}
+.specs-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:16px;
+  margin-top:32px;
+}
+.spec-item{
+  text-align:center;
+  padding:20px 16px;
+  background:rgba(255,255,255,.05);
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.08);
+}
+.spec-ico{font-size:28px;margin-bottom:10px}
+.spec-t{font-weight:700;color:#fff;font-size:14px;margin-bottom:4px}
+.spec-s{font-size:12px;color:var(--light)}
+
+/* ── FINAL CTA ── */
+.cta-sec{
+  background:linear-gradient(160deg,var(--blue) 0%,var(--navy) 100%);
+  padding:80px 20px;
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+.cta-sec::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 80% 80% at 50% 50%,rgba(212,168,42,.08),transparent 70%);
+}
+.cta-sec h2{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(36px,5vw,62px);
+  color:#fff;letter-spacing:.5px;
+  margin-bottom:14px;
+  position:relative;
+}
+.cta-sec h2 em{color:var(--gold2);font-style:normal}
+.cta-sec p{
+  font-family:'Lora',serif;
+  font-size:17px;color:rgba(255,255,255,.65);
+  max-width:520px;margin:0 auto 36px;
+  line-height:1.65;
+  position:relative;
+}
+.cta-wrap{
+  position:relative;
+  display:inline-flex;
+  flex-direction:column;
+  align-items:center;
+  gap:14px;
+}
+.btn-gold-lg{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--gold) 0%,var(--gold2) 100%);
+  color:var(--navy);
+  font-family:'Mulish',sans-serif;
+  font-size:18px;font-weight:800;
+  padding:22px 52px;
+  border-radius:10px;
+  border:none;cursor:pointer;
+  letter-spacing:.4px;
+  text-decoration:none;
+  box-shadow:0 10px 40px rgba(212,168,42,.45);
+  transition:transform .15s,box-shadow .2s;
+}
+.btn-gold-lg:hover{transform:translateY(-3px);box-shadow:0 16px 50px rgba(212,168,42,.6)}
+.cta-trust{
+  display:flex;gap:20px;flex-wrap:wrap;justify-content:center;
+  margin-top:10px;
+}
+.cta-trust-item{
+  color:rgba(255,255,255,.5);font-size:12px;letter-spacing:.3px;
+}
+.cta-trust-item::before{content:'✓ ';color:var(--gold2)}
+
+/* ── FAQ ── */
+.faq{background:var(--offwhite);padding:72px 20px}
+.faq-inner{max-width:700px;margin:0 auto}
+.faq-item{
+  background:#fff;
+  border:1px solid rgba(0,0,0,.07);
+  border-radius:12px;
+  margin-bottom:12px;
+  overflow:hidden;
+}
+.faq-q{
+  width:100%;
+  background:none;border:none;
+  text-align:left;
+  padding:20px 24px;
+  font-family:'Mulish',sans-serif;
+  font-size:15px;font-weight:700;
+  color:var(--navy);
+  cursor:pointer;
+  display:flex;justify-content:space-between;align-items:center;
+  gap:12px;
+}
+.faq-q span{color:var(--gold);font-size:20px;min-width:20px;text-align:center;transition:transform .2s}
+.faq-a{
+  padding:0 24px 0;
+  max-height:0;overflow:hidden;
+  transition:max-height .3s ease,padding .3s ease;
+  font-size:14px;line-height:1.7;color:var(--mid);
+}
+.faq-item.open .faq-a{max-height:300px;padding:0 24px 20px}
+.faq-item.open .faq-q span{transform:rotate(45deg)}
+
+/* ── DISCLAIMER ── */
+.disclaimers{
+  background:#e8e4dc;
+  padding:32px 20px;
+  border-top:1px solid rgba(0,0,0,.1);
+}
+.disclaimers p{
+  font-size:11px;color:#888;
+  max-width:860px;margin:0 auto 8px;
+  line-height:1.8;
+}
+.disclaimers strong{color:#666}
+
+footer{
+  background:var(--navy);
+  color:rgba(255,255,255,.35);
+  text-align:center;
+  padding:28px 20px;
+  font-size:12px;letter-spacing:.4px;
+}
+footer a{color:rgba(255,255,255,.45);text-decoration:none}
+footer a:hover{color:var(--gold2)}
+
+/* ANIMATIONS */
+@keyframes up{
+  from{opacity:0;transform:translateY(22px)}
+  to{opacity:1;transform:translateY(0)}
+}
+</style>
+</head>
+<body>
+
+<!-- Alert Bar -->
+<div class="alert-bar">
+  ⚠️ IMPORTANT: After Age 40, You Lose Muscle Every Single Year — <span>Here's The Fix Doctors Don't Tell You About</span>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">Doctor-Formulated · Made in USA · 8 Essential Amino Acids</div>
+      <h1>Stop <em>Losing</em><br>Your Muscle.<br>Start <em>Rebuilding</em> It.</h1>
+      <p class="hero-sub">
+        The average person loses 30% of their muscle mass by age 60 — and most don't realise it's happening. Advanced Amino Formula gives your body the exact building blocks it needs to reverse this process at any age.
+      </p>
+      <div class="hero-cta">
+        <a href="https://www.advancedbionutritionals.com/DS24/Advanced-Amino/Muscle-Mass-Loss/HD.htm#aff=Fortuneflash" target="_blank" class="btn-gold">
+          ✦ See Full Product Details &amp; Order →
+        </a>
+        <span class="btn-sub">🔒 Secure checkout · 60-Day Money-Back Guarantee · Ships from USA</span>
+      </div>
+    </div>
+    <div class="product-box">
+      <div class="product-img">💊</div>
+      <div class="product-name">Advanced Amino Formula</div>
+      <div class="product-by">by Advanced Bionutritionals</div>
+      <div class="product-stars">★★★★★</div>
+      <div class="product-reviews">Thousands of 5-star reviews</div>
+      <div class="product-badge">✓ Vegan · Non-GMO · GMP Certified</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS ═══ -->
+<div class="stat-bar">
+  <div class="stats">
+    <div class="stat"><div class="stat-n">30%</div><div class="stat-l">Muscle Lost by Age 60</div></div>
+    <div class="stat"><div class="stat-n">99%</div><div class="stat-l">Absorption Rate</div></div>
+    <div class="stat"><div class="stat-n">8</div><div class="stat-l">Essential Amino Acids</div></div>
+    <div class="stat"><div class="stat-n">USA</div><div class="stat-l">Made in GMP Facility</div></div>
+  </div>
+</div>
+
+<!-- ═══ THE PROBLEM ═══ -->
+<section class="prob">
+  <div class="prob-inner">
+    <div class="sec-tag" style="color:var(--gold)">The Harsh Reality</div>
+    <h2 class="sec-h" style="color:#fff;font-size:clamp(32px,5vw,54px)">Your Body Is Quietly<br>Losing Muscle Right Now</h2>
+    <p style="font-family:'Lora',serif;font-size:17px;color:rgba(255,255,255,.6);max-width:600px;line-height:1.7;margin-top:8px">
+      After 30, adults lose lean muscle every year — accelerating rapidly after 40. This isn't just about appearance. It affects your energy, your balance, your independence, and your quality of life.
+    </p>
+    <div class="prob-grid">
+      <div class="prob-col bad">
+        <h3>Without Amino Support ✕</h3>
+        <ul class="prob-list">
+          <li>Muscle gradually wastes away year after year</li>
+          <li>Fatigue and exhaustion become your new normal</li>
+          <li>Slower recovery after any physical activity</li>
+          <li>Loss of strength, balance and stability</li>
+          <li>Flabby skin as muscle underneath disappears</li>
+          <li>Harder to manage body weight as metabolism slows</li>
+        </ul>
+      </div>
+      <div class="prob-col good">
+        <h3>With Advanced Amino Formula ✓</h3>
+        <ul class="prob-list">
+          <li>Rebuild and preserve lean muscle at any age</li>
+          <li>Sustained energy and endurance throughout the day</li>
+          <li>Recover faster after workouts and daily activity</li>
+          <li>Stronger, more resilient muscles and ligaments</li>
+          <li>Improved body composition and muscle tone</li>
+          <li>Supports healthy metabolism and weight management</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HOW IT WORKS ═══ -->
+<section class="sec how">
+  <div class="sec-inner">
+    <div class="sec-tag">How It Works</div>
+    <h2 class="sec-h">The Science of Muscle Preservation</h2>
+    <p class="sec-lead">Advanced Amino Formula delivers all 8 essential amino acids your body cannot produce on its own — in the precise ratios needed for maximum muscle protein synthesis.</p>
+    <div class="rule"></div>
+    <div class="amino-grid">
+      <div class="amino-card">
+        <div class="amino-icon">🏗️</div>
+        <div class="amino-t">Essential Amino Acids</div>
+        <div class="amino-p">Your body uses amino acids to build every protein it needs — muscle tissue, enzymes, hormones, immune cells. Without the right balance, it simply cannot do this effectively.</div>
+      </div>
+      <div class="amino-card">
+        <div class="amino-icon">⚡</div>
+        <div class="amino-t">99% Absorption Rate</div>
+        <div class="amino-p">Unlike whey protein or BCAA-only supplements, Advanced Amino Formula is engineered for near-complete utilisation by the body — producing minimal waste.</div>
+      </div>
+      <div class="amino-card">
+        <div class="amino-icon">🔁</div>
+        <div class="amino-t">Activates Muscle Synthesis</div>
+        <div class="amino-p">L-Leucine activates the mTOR pathway — the body's central switch for muscle protein synthesis. This is the key trigger for new and stronger muscle growth.</div>
+      </div>
+      <div class="amino-card">
+        <div class="amino-icon">🛡️</div>
+        <div class="amino-t">Supports Full-Body Health</div>
+        <div class="amino-p">Beyond muscle, amino acids support collagen production, ligament repair, hormonal balance, immune function, mental clarity, and cellular regeneration.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INGREDIENTS ═══ -->
+<section class="sec" style="background:var(--navy);padding:64px 20px">
+  <div class="sec-inner">
+    <div class="sec-tag">What's Inside</div>
+    <h2 class="sec-h" style="color:#fff">All 8 Essential Amino Acids</h2>
+    <p style="font-family:'Lora',serif;font-size:16px;color:rgba(255,255,255,.55);max-width:560px;line-height:1.7;margin-bottom:36px">
+      Each ingredient is vegan-sourced, non-GMO, and free from gluten, dairy, soy, nuts, and preservatives. Manufactured in a GMP-certified, FDA-registered facility in the USA.
+    </p>
+    <div class="ingr-grid">
+      <div class="ingr-pill">
+        <div class="ingr-name">L-Leucine</div>
+        <div class="ingr-desc">Primary activator of muscle protein synthesis via the mTOR pathway</div>
+      </div>
+      <div class="ingr-pill">
+        <div class="ingr-name">L-Isoleucine</div>
+        <div class="ingr-desc">Branched-chain amino acid that supports energy production and muscle repair</div>
+      </div>
+      <div class="ingr-pill">
+        <div class="ingr-name">L-Valine</div>
+        <div class="ingr-desc">Third BCAA — works alongside leucine and isoleucine for complete muscle support</div>
+      </div>
+      <div class="ingr-pill">
+        <div class="ingr-name">L-Lysine HCl</div>
+        <div class="ingr-desc">Critical for collagen formation, calcium absorption, and immune function</div>
+      </div>
+      <div class="ingr-pill">
+        <div class="ingr-name">L-Phenylalanine</div>
+        <div class="ingr-desc">Supports neurotransmitter production for mood, focus, and pain response</div>
+      </div>
+      <div class="ingr-pill">
+        <div class="ingr-name">L-Threonine</div>
+        <div class="ingr-desc">Essential for protein balance, gut health, and immune system support</div>
+      </div>
+      <div class="ingr-pill">
+        <div class="ingr-name">L-Methionine</div>
+        <div class="ingr-desc">Antioxidant properties, liver support, and plays a role in fat metabolism</div>
+      </div>
+      <div class="ingr-pill">
+        <div class="ingr-name">L-Tryptophan</div>
+        <div class="ingr-desc">Precursor to serotonin — supports mood balance, sleep quality, and recovery</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHO IT'S FOR ═══ -->
+<section class="who">
+  <div class="who-inner">
+    <div class="sec-tag" style="color:var(--gold)">Is This Right For You?</div>
+    <h2 class="sec-h" style="color:#fff">Advanced Amino Formula Is Designed For…</h2>
+    <div class="who-cards">
+      <div class="who-card">
+        <span class="who-emoji">🏋️</span>
+        <div class="who-t">Active Adults Over 40</div>
+        <div class="who-p">Who want to preserve and rebuild muscle despite the natural effects of ageing</div>
+      </div>
+      <div class="who-card">
+        <span class="who-emoji">😴</span>
+        <div class="who-t">Chronically Fatigued People</div>
+        <div class="who-p">Exhaustion that sleep doesn't fix — amino acids support cellular energy production at the source</div>
+      </div>
+      <div class="who-card">
+        <span class="who-emoji">🏃</span>
+        <div class="who-t">Gym-Goers & Exercisers</div>
+        <div class="who-p">Who want faster recovery, less soreness, and stronger results from every workout</div>
+      </div>
+      <div class="who-card">
+        <span class="who-emoji">⚖️</span>
+        <div class="who-t">Weight Management Focus</div>
+        <div class="who-p">Preserving lean muscle keeps metabolism higher — making sustainable weight loss far more achievable</div>
+      </div>
+      <div class="who-card">
+        <span class="who-emoji">🦴</span>
+        <div class="who-t">Joint & Ligament Issues</div>
+        <div class="who-p">Amino acids are the raw material for ligament repair, collagen, and healthy bone mineral density</div>
+      </div>
+      <div class="who-card">
+        <span class="who-emoji">🌿</span>
+        <div class="who-t">Vegan & Dairy-Free</div>
+        <div class="who-p">100% plant-sourced, free from all major allergens — ethical and safe for sensitive individuals</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BENEFITS ═══ -->
+<section class="sec">
+  <div class="sec-inner">
+    <div class="sec-tag">Key Benefits</div>
+    <h2 class="sec-h">What You Can Expect</h2>
+    <div class="rule"></div>
+    <div class="benefits-list">
+      <div class="bene-item"><div class="bene-tick">✓</div><div class="bene-text"><strong>Rebuild lean muscle mass</strong> — even if you're over 50, 60, or 70</div></div>
+      <div class="bene-item"><div class="bene-tick">✓</div><div class="bene-text"><strong>Faster post-workout recovery</strong> — less soreness, more progress</div></div>
+      <div class="bene-item"><div class="bene-tick">✓</div><div class="bene-text"><strong>Increased energy and stamina</strong> throughout your day</div></div>
+      <div class="bene-item"><div class="bene-tick">✓</div><div class="bene-text"><strong>Supports ligament and joint repair</strong> — not just muscle</div></div>
+      <div class="bene-item"><div class="bene-tick">✓</div><div class="bene-text"><strong>Improved mental clarity and focus</strong> via amino acid neurotransmitter support</div></div>
+      <div class="bene-item"><div class="bene-tick">✓</div><div class="bene-text"><strong>Healthier skin, hair, and nails</strong> from collagen production support</div></div>
+      <div class="bene-item"><div class="bene-tick">✓</div><div class="bene-text"><strong>Stronger immune system</strong> — amino acids power your immune cells</div></div>
+      <div class="bene-item"><div class="bene-tick">✓</div><div class="bene-text"><strong>Better balance and stability</strong> — reducing fall risk as you age</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section class="sec" style="background:var(--offwhite)">
+  <div class="sec-inner">
+    <div class="sec-tag">Real Customer Reviews</div>
+    <h2 class="sec-h">What People Are Saying</h2>
+    <p class="sec-lead">These are real verified customer reviews from Advanced Bionutritionals. Individual results may vary.</p>
+    <div class="testi-grid">
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-txt">"I'm 72 years old and I've been taking the amino acids for a few months. I can already see a difference in my muscle tone, my skin tone, the way I feel — everything is better. People say I look younger and want to know what I'm doing."</p>
+        <div class="testi-who">Gene K.</div>
+        <div class="testi-loc">Darlington, SC · December 2025</div>
+      </div>
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-txt">"I've been taking this product for many years. I take five pills every day before the gym. They give me great energy and stamina — my recuperation after heavy sets is unbelievably quick. I'm in my mid 70s and couldn't do what I do without them."</p>
+        <div class="testi-who">Patrick V.</div>
+        <div class="testi-loc">Stockton, CA · January 2026</div>
+      </div>
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-txt">"I started noticing less soreness after workouts, I recovered faster, I gained strength faster. I'm approaching 50 in a few months and have really appreciated the help with muscle retention. People tell me how fit I look — I genuinely believe this supplement has so much to do with it."</p>
+        <div class="testi-who">Kim G.</div>
+        <div class="testi-loc">Verified Customer</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRODUCT SPECS ═══ -->
+<section class="specs">
+  <div class="specs-inner">
+    <div class="sec-tag" style="color:var(--gold)">Product Details</div>
+    <h2 class="sec-h" style="color:#fff">Quality You Can Trust</h2>
+    <div class="specs-grid">
+      <div class="spec-item"><div class="spec-ico">🇺🇸</div><div class="spec-t">Made in the USA</div><div class="spec-s">GMP FDA-registered facility</div></div>
+      <div class="spec-item"><div class="spec-ico">🌱</div><div class="spec-t">100% Vegan</div><div class="spec-s">Plant-sourced ingredients</div></div>
+      <div class="spec-item"><div class="spec-ico">🚫</div><div class="spec-t">Allergen Free</div><div class="spec-s">No gluten, soy, dairy, nuts, GMO</div></div>
+      <div class="spec-item"><div class="spec-ico">💊</div><div class="spec-t">150 Tablets</div><div class="spec-s">30-day supply at 5 per day</div></div>
+      <div class="spec-item"><div class="spec-ico">🔬</div><div class="spec-t">Doctor Formulated</div><div class="spec-s">By Dr. Frank Shallenberger, MD</div></div>
+      <div class="spec-item"><div class="spec-ico">💰</div><div class="spec-t">60-Day Guarantee</div><div class="spec-s">Full refund, no questions asked</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FINAL CTA ═══ -->
+<section class="cta-sec">
+  <h2>Ready to Rebuild <em>Your Strength?</em></h2>
+  <p>Don't let age quietly steal your muscle, energy, and independence. Advanced Amino Formula gives your body exactly what it needs — starting with your very first dose.</p>
+  <div class="cta-wrap">
+    <a href="https://www.advancedbionutritionals.com/DS24/Advanced-Amino/Muscle-Mass-Loss/HD.htm#aff=Fortuneflash" target="_blank" class="btn-gold-lg">
+      ✦ Get Advanced Amino Formula Now →
+    </a>
+    <div class="cta-trust">
+      <span class="cta-trust-item">60-Day Money-Back Guarantee</span>
+      <span class="cta-trust-item">Ships from the USA</span>
+      <span class="cta-trust-item">Secure Checkout</span>
+      <span class="cta-trust-item">No Autoship Required</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="faq">
+  <div class="faq-inner">
+    <div class="sec-tag">Common Questions</div>
+    <h2 class="sec-h" style="margin-bottom:32px">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">How do I take Advanced Amino Formula? <span>+</span></button>
+      <div class="faq-a">Take 5 tablets daily — ideally 30 minutes before physical activity for workout support, or daily at any consistent time for general muscle maintenance. It can be taken with or without food.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Is it suitable for older adults? <span>+</span></button>
+      <div class="faq-a">Yes — in fact, it was specifically designed with age-related muscle loss in mind. Customers in their 60s, 70s, and 80s report significant improvements in strength, energy, and muscle tone. Always consult your doctor before starting any new supplement.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">How is this different from a regular protein shake? <span>+</span></button>
+      <div class="faq-a">Protein shakes require your digestive system to break them down into amino acids first — with significant losses along the way. Advanced Amino Formula delivers the amino acids directly, pre-formulated in the precise ratios the body needs, resulting in approximately 99% utilisation versus roughly 16–18% from most protein powders.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Do I need to exercise for this to work? <span>+</span></button>
+      <div class="faq-a">No. You'll see benefits even without exercise — including improved energy, cognitive support, and general amino acid replenishment. However, the muscle-building benefits are significantly enhanced when combined with any form of resistance training, even light movement.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What is the money-back guarantee? <span>+</span></button>
+      <div class="faq-a">Advanced Bionutritionals offers a full 60-day money-back guarantee. If you're not satisfied for any reason within 60 days of purchase, you can return the product for a complete refund — no questions asked.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DISCLAIMERS ═══ -->
+<div class="disclaimers">
+  <p>
+    <strong>Affiliate Disclosure:</strong> This website contains affiliate links. If you click through and make a purchase, we may receive a commission at no additional cost to you. We only recommend products we have independently researched and genuinely believe may provide value.
+  </p>
+  <p>
+    <strong>Results Disclaimer:</strong> Customer testimonials featured on this page are from the Advanced Bionutritionals website and represent individual experiences. These statements may not reflect the typical purchaser's experience and are not intended to represent or guarantee that anyone will achieve the same or similar results. Individual results will vary based on many factors including age, genetics, diet, exercise habits, and consistency of use.
+  </p>
+  <p>
+    <strong>Medical Disclaimer:</strong> The information on this page is for educational purposes only and is not intended to diagnose, treat, cure, or prevent any disease or health condition. These statements have not been evaluated by the Food and Drug Administration. Always consult your physician or qualified healthcare provider before starting any new supplement, particularly if you have a medical condition or are taking medications.
+  </p>
+</div>
+
+<footer>
+  <p>This is an independent affiliate review page. Advanced Amino Formula is a product of Advanced Bionutritionals®.</p>
+  <p style="margin-top:8px"><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms of Use</a> &nbsp;·&nbsp; <a href="#">Contact</a></p>
+</footer>
+
+<script>
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+</script>
+</body>
+</html>
